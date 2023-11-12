@@ -24,10 +24,10 @@ func main() {
 	app := gin.Default()
 
 	// Templates
-	app.LoadHTMLGlob("views/*")
+	app.LoadHTMLGlob("templates/*/*")
 
-		// Serve static files (CSS, JavaScript, images) from the "public" directory
-	app.Static("/static", "./public")
+	// Serve static files (CSS, JavaScript, images) from the "public" directory
+	app.Static("/assets", "./assets")
 
 	// Initialize routes by calling SetupRoutes
 	route.SetupRoutes(app)

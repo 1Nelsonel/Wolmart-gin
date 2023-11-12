@@ -7,12 +7,12 @@ import (
 )
 
 func SetupRoutes(r *gin.Engine) {
-	// Define routes
-	r.GET("/products", controller.GetProduct)
-	r.GET("/products/:id", controller.GetProduct)
-	r.POST("/products", controller.CreateProduct)
-	r.PUT("/products/:id", controller.UpdateProduct)
-	r.DELETE("/products/:id", controller.DeleteProduct)
-	r.GET("/products/category/:category", controller.GetProductsByCategory)
+	r.GET("/", controller.HomePage)
+	r.GET("shop/", controller.Shop)
+	r.GET("product/", controller.GetProduct)  ///products/:id
+	r.POST("products", controller.CreateProduct)
+	r.PUT("products/:id", controller.UpdateProduct)
+	r.DELETE("products/:id", controller.DeleteProduct)
+	r.GET("products/category/:category", controller.GetProductsByCategory)
 
 }

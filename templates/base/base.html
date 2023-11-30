@@ -1,3 +1,5 @@
+{{ define "top" }}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,9 +62,10 @@
         <!-- Header -->
         {{ template "header.html" }}
 
-        <!-- Templates -->
-        {{ block "content" . }}{{ end }}
+        {{ end }}
 
+
+        {{ define "bottom" }}
         <!-- Footer -->
         {{ template "footer.html" }}
       
@@ -844,3 +847,4 @@
 
 <!-- Mirrored from portotheme.com/html/wolmart/demo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Sep 2023 09:40:47 GMT -->
 </html>
+{{ end }}
